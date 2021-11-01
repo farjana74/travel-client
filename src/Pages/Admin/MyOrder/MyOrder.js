@@ -54,7 +54,7 @@ fetch(url,{
               <th>Email</th>
               <th>Adress</th>
               <th>Price</th>
-              <th>Travel place</th>
+              
               <th>img url</th>
               <th>phone</th>
             </tr>
@@ -65,7 +65,10 @@ fetch(url,{
                 <td>{index}</td>
                 <td>{tm?.name}</td>
                 <td>{tm?.email}</td>
-                <td>{tm?.phone}</td>
+                <td>{tm?.Adress}</td>
+                <td>{tm?.Price}</td>
+                <td>{tm?.img}</td>
+                <td>{tm?.Phone}</td>
                 <button onClick={()=>handleDelete(tm._id)} className="btn bg-danger p-2">Delete</button>
               </tr>
             </tbody>

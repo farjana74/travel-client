@@ -54,7 +54,7 @@ const ManageOrder = () => {
               <th>Email</th>
               <th>Adress</th>
               <th>Price</th>
-              <th>Travel place</th>
+              
               <th>img url</th>
               <th>phone</th>
           </tr>
@@ -65,7 +65,10 @@ const ManageOrder = () => {
               <td>{index}</td>
               <td>{pd?.name}</td>
               <td>{pd?.email}</td>
-              <td>{pd?.date}</td>
+              <td>{pd?.Adress}</td>
+              <td>{pd?.Price}</td>
+              <td>{pd?.img}</td>
+              <td>{pd?.Phone}</td>
               <button onClick={()=>handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
             </tr>
           </tbody>
