@@ -1,0 +1,14 @@
+.details{
+    /* background-image: url(https://i.ibb.co/k5G7h82/transparant.jpg); */
+    /* background-position: center; */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-color:rgb(138, 138, 202); */
+    
+}
+.submit input{
+    border-radius: 10px;
+    padding: 10px;
+    width:75%;
+    border:2px solid blue
+}
