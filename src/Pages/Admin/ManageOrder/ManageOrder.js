@@ -45,15 +45,18 @@ const ManageOrder = () => {
 
 
         <div>
-      <h1>AllVolunteers {manage?.length}</h1>
+      <h1>Manage order {manage?.length}</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Date</th>
-            <th>Action</th>
+          <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Adress</th>
+              <th>Price</th>
+              <th>Travel place</th>
+              <th>img url</th>
+              <th>phone</th>
           </tr>
         </thead>
         {manage?.map((pd, index) => (

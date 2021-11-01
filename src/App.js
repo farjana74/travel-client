@@ -19,6 +19,7 @@ import MyOrder from './Pages/Admin/MyOrder/MyOrder';
 import ManageOrder from './Pages/Admin/ManageOrder/ManageOrder';
 import AdminDasboard from './Pages/Admin/AdminDashboard/AdminDasboard';
 import Footer from './Pages/Shared/Footer/Footer';
+import NotFound from './Pages/NotFound/NotFound';
 // import Footer from './pages/Shared/Footer/Footer';
 
 function App() {
@@ -66,7 +67,9 @@ function App() {
 <Route path ="/contact">
 <Contact></Contact>
 </Route>
-
+<Route exact path="*">
+<NotFound></NotFound>
+</Route>
 </Switch>
 <br />
 <br />

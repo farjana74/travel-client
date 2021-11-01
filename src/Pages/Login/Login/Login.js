@@ -52,7 +52,7 @@ const Login = () => {
             <Container className="py-4">
                 <Row>
                     <Col xs={12} md={6} className="mb-5">
-                        <h1 className="text-center fw-bold">Dicin Hospital</h1>
+                        <h1 className="text-center fw-bold">Travel Agency</h1>
                         <img
                             className="logo"
                             src={login}

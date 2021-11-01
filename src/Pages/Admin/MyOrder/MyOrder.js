@@ -52,8 +52,11 @@ fetch(url,{
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Date</th>
-              <th>Action</th>
+              <th>Adress</th>
+              <th>Price</th>
+              <th>Travel place</th>
+              <th>img url</th>
+              <th>phone</th>
             </tr>
           </thead>
           {order?.map((tm, index) => (
