@@ -7,13 +7,15 @@ const ManageOrder = () => {
     const[manage,setManage]=useState([])
     // const [admin,setAdmin] = useState(false);
     useEffect(()=>{
-        fetch('https://fast-cliffs-36644.herokuapp.com/manageOrder')
+        // fetch('https://fast-cliffs-36644.herokuapp.com/manageOrder')
+       fetch('http://localhost:5000/orders')
+
         .then(res=>res.json())
         .then(data=>setManage(data))
     },[])
     // / delete usee
     const handleDelete=id=>{
-    const url = `https://fast-cliffs-36644.herokuapp.com/orders/${id}`;
+    const url = `https://fast-cliffs-36644.herokuapp.com/${id}`;
     fetch(url,{
       method:'DELETE'
     })
@@ -52,11 +54,12 @@ const ManageOrder = () => {
           <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Adress</th>
+              <th>Address</th>
               <th>Price</th>
+              <th>Place</th>
               
-              <th>img url</th>
-              <th>phone</th>
+             
+              <th>Phone</th>
           </tr>
         </thead>
         {manage?.map((pd, index) => (
@@ -65,10 +68,11 @@ const ManageOrder = () => {
               <td>{index}</td>
               <td>{pd?.name}</td>
               <td>{pd?.email}</td>
-              <td>{pd?.Adress}</td>
-              <td>{pd?.Price}</td>
-              <td>{pd?.img}</td>
-              <td>{pd?.Phone}</td>
+              <td>{pd?.address}</td>
+              <td>{pd?.price}</td>
+              <td>{pd?.place}</td>
+              
+              <td>{pd?.phone}</td>
               <button onClick={()=>handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
             </tr>
           </tbody>

@@ -10,10 +10,11 @@ import './Details.css';
 
 const Details = () => {
 const {user}=useAuth();
-    const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
+    const { register, handleSubmit,reset, formState: { errors } } = useForm();
 
     const onSubmit = data =>{
-        fetch('https://fast-cliffs-36644.herokuapp.com/orders',{
+        console.log(data)
+        fetch('http://localhost:5000/orders',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -39,7 +40,7 @@ const {user}=useAuth();
     const{detailsId}=useParams()
     const [book,setBook]=useState({})
     useEffect(()=>{
-        fetch(`https://fast-cliffs-36644.herokuapp.com/services/${detailsId}`)
+        fetch(`http://localhost:5000/services/${detailsId}`)
         .then(res=>res.json())
         .then(data=>setBook(data))
     },[])
@@ -73,19 +74,17 @@ const {user}=useAuth();
       {errors.email && <span>This field is required</span>}
       <br />
       <br />
-      <input {...register("Address")} placeholder="Address" />
+      <input {...register("address")} placeholder="Address" />
       <br />
       <br />
-      <input {...register("Price")} placeholder="Price" />
+      <input {...register("price")} placeholder="Price" />
       <br />
       <br />
-      <input {...register("Travel place")} placeholder="Travel place" />
+      <input {...register("place")} placeholder="Travel place" />
       <br />
       <br />
-      <input  {...register("img")}  placeholder="image url"/>
-      <br />
-      <br />
-      <input type="number" {...register("Phone")} placeholder="phone" />
+     
+      <input type="number" {...register("phone")} placeholder="phone" />
       <br />
       <br />
      

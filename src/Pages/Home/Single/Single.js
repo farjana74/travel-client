@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// https://fast-cliffs-36644.herokuapp.com/
 const Single = ({services}) => {
     console.log(services);
     const {name,price,img,description,_id}=services

@@ -9,7 +9,7 @@ const MyOrder = () => {
     const[order,setOrder]=useState([]);
     const[admin,setAdmin]=useState(false)
     useEffect(()=>{
-        fetch(`https://fast-cliffs-36644.herokuapp.com/orders/${user?.email}`)
+        fetch(`https://fast-cliffs-36644.herokuapp.com/${user?.email}`)
 
         .then(res=>res.json())
         .then(data=>setOrder(data))
@@ -18,7 +18,7 @@ const MyOrder = () => {
     console.log(order)
 // delete usee
 const handleDelete=id=>{
-const url = `https://fast-cliffs-36644.herokuapp.com/orders/${id}`;
+const url = `https://fast-cliffs-36644.herokuapp.com/${id}`;
 fetch(url,{
   method:'DELETE'
 })
@@ -52,10 +52,11 @@ fetch(url,{
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Adress</th>
+              <th>Address</th>
               <th>Price</th>
+              <th>Place</th>
               
-              <th>img url</th>
+              
               <th>phone</th>
             </tr>
           </thead>
@@ -65,10 +66,11 @@ fetch(url,{
                 <td>{index}</td>
                 <td>{tm?.name}</td>
                 <td>{tm?.email}</td>
-                <td>{tm?.Adress}</td>
-                <td>{tm?.Price}</td>
-                <td>{tm?.img}</td>
-                <td>{tm?.Phone}</td>
+                <td>{tm?.address}</td>
+                <td>{tm?.price}</td>
+                <td>{tm?.place}</td>
+                
+                <td>{tm?.phone}</td>
                 <button onClick={()=>handleDelete(tm._id)} className="btn bg-danger p-2">Delete</button>
               </tr>
             </tbody>
