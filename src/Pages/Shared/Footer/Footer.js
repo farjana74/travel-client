@@ -7,9 +7,9 @@ const Footer = () => {
     return (
         <div className="bor p-3">
             <div className="row ">
-                <div className="  col-md-3  text-center text-white">
-                    <h2 className="my-3 text-center">Contact us</h2>
-                    <div className="d-flex text-center mx-2 my-3 ">
+                <div className="  col-md-3 fs-6 text-white">
+                    <h2 className="my-3 ">Contact us</h2>
+                    <div className="d-flex fs-6 text-center mx-2 my-3 ">
                         <div>
                         <i class="me-3 fas fa-envelope"></i>
                         </div>
@@ -34,9 +34,9 @@ const Footer = () => {
                         <i class=" me-3 fas fa-location-arrow  "></i>
                         </div>
                         <div>
-                            <h5>207,88th home,
+                            <h5>
                                 Mirpur dhaka,
-                                Albali gate r oposite
+                            
                             </h5>
                         </div>
                     </div>
@@ -45,12 +45,12 @@ const Footer = () => {
                 <div className="  mx-3 col-md-2 ">
 <h2 className="text-center text-white my-3 ">Quick links</h2>
 
-<ul className="fs-4 text-white my-2">
+<ul className="fs-5 text-white my-2">
     <li>Home</li>
     <li>About</li>
     <li>Contact</li>
     <li>Doctor</li>
-    <li>Services</li>
+  
 </ul>
 
 
@@ -60,13 +60,12 @@ const Footer = () => {
                 <div className=" col-md-2  mx-3 ">
                 <h2 className="text-center text-white my-3">Our Services</h2>
 
-                <ul className="fs-4 text-white my-2">
+                <ul className="fs-5 text-white my-2">
                     <li>Best Service</li>
                     <li>Extra Care</li>
                     <li>Hijama Place</li>
                     <li>Cost Manage</li>
-                    <li>Special Service</li>
-                    <li>High Security</li>
+                  
                 </ul>
                 </div>
                 <div className=" col-md-2  mx-3">

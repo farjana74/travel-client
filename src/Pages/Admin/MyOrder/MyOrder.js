@@ -55,9 +55,8 @@ fetch(url,{
               <th>Address</th>
               <th>Price</th>
               <th>Place</th>
-              
-              
               <th>phone</th>
+              <th>Option</th>
             </tr>
           </thead>
           {order?.map((tm, index) => (

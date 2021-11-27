@@ -10,9 +10,9 @@ const AdminDasboard = () => {
     return (
         <div className="container-fluid">
             <h2 className="text-center fs-2 fw-bold">Admin dashboard</h2>
-<div className="row my-5">
+<div className="row my-5  ">
 
-    <div className="col-md-3 border admin shadow-lg text-primary ">
+    <div className="col-md-3 border admin shadow-lg board   ">
     <li
                     onClick={() => setAdmin("manageOrder")}
                     className="admin-menu p-2"
@@ -36,7 +36,7 @@ const AdminDasboard = () => {
                   
 
     </div>
-    <div className="col-md-6">
+    <div className="col-md-7 ">
     {admin === "manageOrder" &&<ManageOrder></ManageOrder>}
     {admin === "myOrder" && <MyOrder></MyOrder>}
               {admin === "addService" && <AddService></AddService>}

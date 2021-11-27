@@ -21,10 +21,11 @@ import AdminDasboard from './Pages/Admin/AdminDashboard/AdminDasboard';
 import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 // import Footer from './pages/Shared/Footer/Footer';
+import Register from './Pages/Register/Register';
 
 function App() {
   return (
-    <div>
+    <div className="travel">
       <AuthProvider>
 <BrowserRouter>
 <Header></Header>
@@ -62,6 +63,10 @@ function App() {
 
 <Route exact path="/login">
        <Login></Login>
+
+     </Route>
+<Route exact path="/register">
+       <Register></Register>
 
      </Route>
 <Route path ="/contact">

@@ -47,7 +47,7 @@ const ManageOrder = () => {
 
 
         <div>
-      <h1>Manage order {manage?.length}</h1>
+      <h1 class="text-center">Manage order {manage?.length}</h1>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -57,9 +57,11 @@ const ManageOrder = () => {
               <th>Address</th>
               <th>Price</th>
               <th>Place</th>
+              <th>Phone</th>
+              <th>Option</th>
               
              
-              <th>Phone</th>
+             
           </tr>
         </thead>
         {manage?.map((pd, index) => (
