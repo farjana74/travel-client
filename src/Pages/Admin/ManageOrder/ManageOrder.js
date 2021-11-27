@@ -2,20 +2,20 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
 // import { useEffect } from 'react';
-
+// https://fast-cliffs-36644.herokuapp.com/
 const ManageOrder = () => {
     const[manage,setManage]=useState([])
     // const [admin,setAdmin] = useState(false);
     useEffect(()=>{
         // fetch('https://fast-cliffs-36644.herokuapp.com/manageOrder')
-       fetch('http://localhost:5000/orders')
+       fetch('https://fast-cliffs-36644.herokuapp.com/orders')
 
         .then(res=>res.json())
         .then(data=>setManage(data))
     },[])
     // / delete usee
     const handleDelete=id=>{
-    const url = `https://fast-cliffs-36644.herokuapp.com/${id}`;
+    const url = `https://fast-cliffs-36644.herokuapp.com/orders/${id}`;
     fetch(url,{
       method:'DELETE'
     })

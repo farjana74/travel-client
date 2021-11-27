@@ -13,8 +13,8 @@ const {user}=useAuth();
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
 
     const onSubmit = data =>{
-        console.log(data)
-        fetch('http://localhost:5000/orders',{
+       
+        fetch('https://fast-cliffs-36644.herokuapp.com/orders',{
             method:"POST",
             headers:{
                 'content-type':'application/json'
@@ -40,7 +40,7 @@ const {user}=useAuth();
     const{detailsId}=useParams()
     const [book,setBook]=useState({})
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${detailsId}`)
+        fetch(`https://fast-cliffs-36644.herokuapp.com/services/${detailsId}`)
         .then(res=>res.json())
         .then(data=>setBook(data))
     },[])

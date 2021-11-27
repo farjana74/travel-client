@@ -9,7 +9,7 @@ const MyOrder = () => {
     const[order,setOrder]=useState([]);
     const[admin,setAdmin]=useState(false)
     useEffect(()=>{
-        fetch(`https://fast-cliffs-36644.herokuapp.com/${user?.email}`)
+        fetch(`https://fast-cliffs-36644.herokuapp.com/orders/${user?.email}`)
 
         .then(res=>res.json())
         .then(data=>setOrder(data))
@@ -18,7 +18,7 @@ const MyOrder = () => {
     console.log(order)
 // delete usee
 const handleDelete=id=>{
-const url = `https://fast-cliffs-36644.herokuapp.com/${id}`;
+const url = `https://fast-cliffs-36644.herokuapp.com/orders/${id}`;
 fetch(url,{
   method:'DELETE'
 })

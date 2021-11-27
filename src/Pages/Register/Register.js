@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 // import { Link } from "react-router-dom";
 // import useAuth from "../../hooks/useAuth";
 import register from '../../images/p-2.png'
+// https://fast-cliffs-36644.herokuapp.com/
 const Register = () => {
     const { regiError, registerNewUser } = useAuth();
 
